@@ -1,0 +1,917 @@
+
+7 hours ago - 2023-12-12 10:53:14.503 EST - OnErrorPropagateHandler - 63b28cba-e91f-4f91-bf12-c9edbd4c69fa
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:14.503 EST - OnErrorPropagateHandler - 63b28cba-e91f-4f91-bf12-c9edbd4c69fa
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:08.613 EST - OnErrorPropagateHandler - 6b99bd9e-0df8-4852-9e2e-e9b686591c83
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:08.612 EST - OnErrorPropagateHandler - 6b99bd9e-0df8-4852-9e2e-e9b686591c83
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:52:56.377 EST - OnErrorPropagateHandler - 80fdaf9f-af53-4dba-8dca-1a3a81a59d01
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:52:56.376 EST - OnErrorPropagateHandler - 80fdaf9f-af53-4dba-8dca-1a3a81a59d01
+Replica n76vt
+$[MuleRuntime].uber.997: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-916c-03950e52-9230-5d655b9b2f0a' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:44:00.992 EST - OnErrorPropagateHandler - 78af578b-76eb-47fe-960f-0d35ca83ac99
+Replica n76vt
+$[MuleRuntime].uber.134: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:44:00.991 EST - OnErrorPropagateHandler - 78af578b-76eb-47fe-960f-0d35ca83ac99
+Replica n76vt
+$[MuleRuntime].uber.134: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:34:45.031 EST - OnErrorPropagateHandler - 4164420c-a255-471c-830d-daf753ff97f1
+Replica n76vt
+$[MuleRuntime].uber.130: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:34:45.031 EST - OnErrorPropagateHandler - 4164420c-a255-471c-830d-daf753ff97f1
+Replica n76vt
+$[MuleRuntime].uber.130: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:30:51.787 EST - OnErrorPropagateHandler - 2a18d72b-05e2-4171-bd72-e32d15ffd8fd
+Replica n76vt
+$[MuleRuntime].uber.127: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: gateway timeout (504).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:30:51.787 EST - OnErrorPropagateHandler - 2a18d72b-05e2-4171-bd72-e32d15ffd8fd
+Replica n76vt
+$[MuleRuntime].uber.127: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: gateway timeout (504).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:50:32.983 EST - OnErrorPropagateHandler - 58c4fe8a-9e28-499c-a70f-c88c66706e91
+Replica n76vt
+$[MuleRuntime].uber.114: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:50:32.982 EST - OnErrorPropagateHandler - 58c4fe8a-9e28-499c-a70f-c88c66706e91
+Replica n76vt
+$[MuleRuntime].uber.114: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:59.146 EST - OnErrorPropagateHandler - 5e059e94-4fe3-4138-9e1c-2922b48e9f37
+Replica n76vt
+$[MuleRuntime].uber.111: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:59.145 EST - OnErrorPropagateHandler - 5e059e94-4fe3-4138-9e1c-2922b48e9f37
+Replica n76vt
+$[MuleRuntime].uber.111: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:37.339 EST - OnErrorPropagateHandler - 93bfe9a5-e446-45ae-8d9c-7f1d50ae5643
+Replica n76vt
+$[MuleRuntime].uber.111: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:37.339 EST - OnErrorPropagateHandler - 93bfe9a5-e446-45ae-8d9c-7f1d50ae5643
+Replica n76vt
+$[MuleRuntime].uber.111: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a9-dd3214ba-9098-508999748230' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:42:04.797 EST - OnErrorPropagateHandler - 3c2e86cf-0e07-447e-8aa0-69b66c1658c7
+Replica n76vt
+$[MuleRuntime].uber.105: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-b619e638-8f84-596a666cf77d' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:42:04.796 EST - OnErrorPropagateHandler - 3c2e86cf-0e07-447e-8aa0-69b66c1658c7
+Replica n76vt
+$[MuleRuntime].uber.105: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-b619e638-8f84-596a666cf77d' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:38:05.145 EST - OnErrorContinueHandler - 568c6135-5bdc-494e-be08-a810a64b94ff
+Replica n76vt
+$[MuleRuntime].uber.104: [baycare-cerner-bulk-export-sapi].get:\status:baycare-cerner-bulk-export-sapi-config.CPU_INTENSIVE @206666b9 - 
+********************************************************************************
+Message               : "Unable to parse empty input, while reading `payload` as Json.
+ 
+1| 
+   ^" evaluating expression: "%dw 2.0
+output application/json
+---
+{
+	attributes: attributes,
+	data: payload 
+}".
+Element               : status-implementation-flow/processors/4/processors/0 @ baycare-cerner-bulk-export-sapi:implementation.xml:108 (Transform Message)
+Element DSL           : <ee:transform doc:name="Transform Message" doc:id="977d8670-7c39-41c6-b8bc-593e4c1eb1b2">
+<ee:message>
+<ee:set-payload><![CDATA[
+%dw 2.0
+output application/json
+---
+{
+	attributes: attributes,
+	data: payload 
+}
+]]></ee:set-payload>
+</ee:message>
+</ee:transform>
+Error type            : MULE:EXPRESSION
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/4/processors/0 @ baycare-cerner-bulk-export-sapi:implementation.xml:108 (Transform Message))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:36:15.474 EST - OnErrorPropagateHandler - ed0c6ec1-57a2-4296-be25-d94cd65be72b
+Replica n76vt
+$[MuleRuntime].uber.101: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-3975e32a-873f-d71219948206' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:36:15.474 EST - OnErrorPropagateHandler - ed0c6ec1-57a2-4296-be25-d94cd65be72b
+Replica n76vt
+$[MuleRuntime].uber.101: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-3975e32a-873f-d71219948206' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:35:43.038 EST - OnErrorPropagateHandler - 1ba448c2-92f1-46c9-ba82-3da210c24e17
+Replica n76vt
+$[MuleRuntime].uber.98: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-3975e32a-873f-d71219948206' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:35:43.037 EST - OnErrorPropagateHandler - 1ba448c2-92f1-46c9-ba82-3da210c24e17
+Replica n76vt
+$[MuleRuntime].uber.98: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-96a8-3975e32a-873f-d71219948206' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:33:35.935 EST - OnErrorContinueHandler - 8a9bf71a-acf7-47c5-8c7a-151f7c6f5e6d
+Replica n76vt
+$[MuleRuntime].uber.97: [baycare-cerner-bulk-export-sapi].get:\status:baycare-cerner-bulk-export-sapi-config.CPU_INTENSIVE @206666b9 - 
+********************************************************************************
+Message               : "Unable to parse empty input, while reading `payload` as Json.
+ 
+1| 
+   ^" evaluating expression: "%dw 2.0
+output application/json
+---
+{
+	attributes: attributes,
+	data: payload 
+}".
+Element               : status-implementation-flow/processors/4/processors/0 @ baycare-cerner-bulk-export-sapi:implementation.xml:108 (Transform Message)
+Element DSL           : <ee:transform doc:name="Transform Message" doc:id="977d8670-7c39-41c6-b8bc-593e4c1eb1b2">
+<ee:message>
+<ee:set-payload><![CDATA[
+%dw 2.0
+output application/json
+---
+{
+	attributes: attributes,
+	data: payload 
+}
+]]></ee:set-payload>
+</ee:message>
+</ee:transform>
+Error type            : MULE:EXPRESSION
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/4/processors/0 @ baycare-cerner-bulk-export-sapi:implementation.xml:108 (Transform Message))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:30:15.356 EST - OnErrorPropagateHandler - fb6b9c9c-c768-4f55-af30-ed0920793566
+Replica n76vt
+$[MuleRuntime].uber.92: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:30:15.356 EST - OnErrorPropagateHandler - fb6b9c9c-c768-4f55-af30-ed0920793566
+Replica n76vt
+$[MuleRuntime].uber.92: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:29:56.261 EST - OnErrorPropagateHandler - 537e2324-bd2c-4fda-bcee-387fdefb68d6
+Replica n76vt
+$[MuleRuntime].uber.92: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:29:56.261 EST - OnErrorPropagateHandler - 537e2324-bd2c-4fda-bcee-387fdefb68d6
+Replica n76vt
+$[MuleRuntime].uber.92: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:27:44.252 EST - OnErrorPropagateHandler - 97a37871-a86e-40c6-b840-4714848954a9
+Replica n76vt
+$[MuleRuntime].uber.90: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: gateway timeout (504).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:27:44.252 EST - OnErrorPropagateHandler - 97a37871-a86e-40c6-b840-4714848954a9
+Replica n76vt
+$[MuleRuntime].uber.90: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: gateway timeout (504).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:06:12.903 EST - OnErrorPropagateHandler - bede56be-725f-4a16-9cbf-f195446ad03a
+Replica n76vt
+$[MuleRuntime].uber.79: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @48cab8 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/files/11ee-96a1-d90aa260-97a2-10bc7d6ee99e' failed: gateway timeout (504).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:06:12.903 EST - OnErrorPropagateHandler - bede56be-725f-4a16-9cbf-f195446ad03a
+Replica n76vt
+$[MuleRuntime].uber.79: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @48cab8 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/files/11ee-96a1-d90aa260-97a2-10bc7d6ee99e' failed: gateway timeout (504).
+Element               : result-implementatio-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:150 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="22936749-a655-42fb-a12c-1d055614f4a9" config-ref="cerner-export" requestStreamingMode="AUTO" followRedirects="false" path="#[p('bulkrequest.resultpath') ++ vars.fileid]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+Authorization: "Bearer " ++ payload."access_token",
+Accept: "application/fhir+ndjson",
+Prefer:"respond-async",
+'Cache-Control': 'no-cache',
+Connection: "keep-alive"
+
+
+}]
+]]></http:headers>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at result-implementatio-flow(result-implementatio-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:150 (requestToCernerExport))
+at get:\result:baycare-cerner-bulk-export-sapi-config(get:\result:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:50 (resultImplementatioFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:58.074 EST - OnErrorPropagateHandler - fb01b81a-d0e5-4bc9-9573-325155d4344c
+Replica n76vt
+$[MuleRuntime].uber.54: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:58.074 EST - OnErrorPropagateHandler - fb01b81a-d0e5-4bc9-9573-325155d4344c
+Replica n76vt
+$[MuleRuntime].uber.54: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:30.467 EST - OnErrorPropagateHandler - 69375a13-5f81-4815-afe4-8cebff8fb650
+Replica n76vt
+$[MuleRuntime].uber.54: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:30.466 EST - OnErrorPropagateHandler - 69375a13-5f81-4815-afe4-8cebff8fb650
+Replica n76vt
+$[MuleRuntime].uber.54: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @5e331960 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/bulk-export/jobs/11ee-969c-0b7220e4-8b0f-5f6cc0a68380' failed: internal server error (500).
+Element               : status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="3135408e-f65e-4fe5-bc99-e27f2f0fe4a8" config-ref="cerner-export" path="#[p('bulkrequest.statuspath') ++ vars.jobid]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at status-implementation-flow(status-implementation-flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:97 (requestToCernerExport))
+at get:\status:baycare-cerner-bulk-export-sapi-config(get:\status:baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:53 (statusImplementationFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:04:12.588 EST - OnErrorPropagateHandler - da004442-2b91-4311-b1f3-c5bceee1e20e
+Replica n76vt
+$[MuleRuntime].uber.19: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @7c6448c1 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Group/11ee-825c-2f771b60-8151-a7bda3f20937/$export' failed: gateway timeout (504).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:04:12.588 EST - OnErrorPropagateHandler - da004442-2b91-4311-b1f3-c5bceee1e20e
+Replica n76vt
+$[MuleRuntime].uber.19: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @7c6448c1 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Group/11ee-825c-2f771b60-8151-a7bda3f20937/$export' failed: gateway timeout (504).
+Element               : export-implementation-Sub_Flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:53 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="6f2b1160-b561-4c38-abd1-f70956878f57" config-ref="cerner-export" path="#[p('bulkrequest.exportpath') ++ vars.id ++ p('bulkrequest.path')]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+<http:query-params><![CDATA[
+#[vars.data]
+]]></http:query-params>
+</http:request>
+Error type            : HTTP:GATEWAY_TIMEOUT
+FlowStack             : at export-implementation-Sub_Flow(export-implementation-Sub_Flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:53 (requestToCernerExport))
+at get:\export\(group_id):baycare-cerner-bulk-export-sapi-config(get:\export\(group_id):baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:44 (exportImplementationSubFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:42:15.166 EST - OnErrorPropagateHandler - d43eb039-6c64-4d83-beca-d842f8eb501d
+Replica n76vt
+$[MuleRuntime].uber.07: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @7c6448c1 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Group/11ee-825c-2f771b60-8151-a7bda3f20937/$export' failed: bad request (400).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:BAD_REQUEST
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:42:15.166 EST - OnErrorPropagateHandler - d43eb039-6c64-4d83-beca-d842f8eb501d
+Replica n76vt
+$[MuleRuntime].uber.07: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @7c6448c1 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Group/11ee-825c-2f771b60-8151-a7bda3f20937/$export' failed: bad request (400).
+Element               : export-implementation-Sub_Flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:53 (requestToCernerExport)
+Element DSL           : <http:request method="GET" doc:name="requestToCernerExport" doc:id="6f2b1160-b561-4c38-abd1-f70956878f57" config-ref="cerner-export" path="#[p('bulkrequest.exportpath') ++ vars.id ++ p('bulkrequest.path')]">
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:headers><![CDATA[
+#[output application/java
+---
+{
+	"Authorization" : "Bearer " ++ payload."access_token",
+	"Accept": "application/fhir+json",
+	"Prefer": "respond-async"
+}]
+]]></http:headers>
+<http:query-params><![CDATA[
+#[vars.data]
+]]></http:query-params>
+</http:request>
+Error type            : HTTP:BAD_REQUEST
+FlowStack             : at export-implementation-Sub_Flow(export-implementation-Sub_Flow/processors/3 @ baycare-cerner-bulk-export-sapi:implementation.xml:53 (requestToCernerExport))
+at get:\export\(group_id):baycare-cerner-bulk-export-sapi-config(get:\export\(group_id):baycare-cerner-bulk-export-sapi-config/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:44 (exportImplementationSubFlow))
+at baycare-cerner-bulk-export-sapi-main(baycare-cerner-bulk-export-sapi-main/processors/0 @ baycare-cerner-bulk-export-sapi:baycare-cerner-bulk-export-sapi.xml:13)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:41:12.494 EST - OnErrorPropagateHandler - e06b1bb0-16b3-4b7c-93ee-3336d3429c17
+Replica n76vt
+$[MuleRuntime].uber.04: [baycare-cerner-bulk-export-sapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @7c6448c1 - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://fhir-ehr.sandboxcerner.com:443/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Group/11ee-825c-2f771b60-8151-a7bda3f20937/$export' failed: bad request (400).
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:BAD_REQUEST
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error

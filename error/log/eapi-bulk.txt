@@ -1,0 +1,1538 @@
+  baycare-bekhealth-eapi
+Search
+Last deployed 7 days ago - 2023-12-05 10:19 EST
+Error
+7 hours ago - 2023-12-12 10:53:14.513 EST - OnErrorPropagateHandler - 63b28cba-e91f-4f91-bf12-c9edbd4c69fa
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:14.511 EST - OnErrorPropagateHandler - 63b28cba-e91f-4f91-bf12-c9edbd4c69fa
+Replica 4p625
+$[MuleRuntime].uber.2279: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:14.510 EST - OnErrorPropagateHandler - 63b28cba-e91f-4f91-bf12-c9edbd4c69fa
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:08.626 EST - OnErrorPropagateHandler - 6b99bd9e-0df8-4852-9e2e-e9b686591c83
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:08.623 EST - OnErrorPropagateHandler - 6b99bd9e-0df8-4852-9e2e-e9b686591c83
+Replica 4p625
+$[MuleRuntime].uber.2279: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:53:08.622 EST - OnErrorPropagateHandler - 6b99bd9e-0df8-4852-9e2e-e9b686591c83
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:52:56.388 EST - OnErrorPropagateHandler - 80fdaf9f-af53-4dba-8dca-1a3a81a59d01
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:52:56.385 EST - OnErrorPropagateHandler - 80fdaf9f-af53-4dba-8dca-1a3a81a59d01
+Replica 4p625
+$[MuleRuntime].uber.2279: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+7 hours ago - 2023-12-12 10:52:56.383 EST - OnErrorPropagateHandler - 80fdaf9f-af53-4dba-8dca-1a3a81a59d01
+Replica 4p625
+$[MuleRuntime].uber.2280: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:44:01.002 EST - OnErrorPropagateHandler - 78af578b-76eb-47fe-960f-0d35ca83ac99
+Replica 4p625
+$[MuleRuntime].uber.1418: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:44:01.000 EST - OnErrorPropagateHandler - 78af578b-76eb-47fe-960f-0d35ca83ac99
+Replica 4p625
+$[MuleRuntime].uber.1419: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:44:00.998 EST - OnErrorPropagateHandler - 78af578b-76eb-47fe-960f-0d35ca83ac99
+Replica 4p625
+$[MuleRuntime].uber.1418: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:34:45.042 EST - OnErrorPropagateHandler - 4164420c-a255-471c-830d-daf753ff97f1
+Replica 4p625
+$[MuleRuntime].uber.1414: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:34:45.039 EST - OnErrorPropagateHandler - 4164420c-a255-471c-830d-daf753ff97f1
+Replica 4p625
+$[MuleRuntime].uber.1415: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:34:45.037 EST - OnErrorPropagateHandler - 4164420c-a255-471c-830d-daf753ff97f1
+Replica 4p625
+$[MuleRuntime].uber.1414: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:30:51.801 EST - OnErrorPropagateHandler - 2a18d72b-05e2-4171-bd72-e32d15ffd8fd
+Replica 4p625
+$[MuleRuntime].uber.1411: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:30:51.796 EST - OnErrorPropagateHandler - 2a18d72b-05e2-4171-bd72-e32d15ffd8fd
+Replica 4p625
+$[MuleRuntime].uber.1412: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 11:30:51.795 EST - OnErrorPropagateHandler - 2a18d72b-05e2-4171-bd72-e32d15ffd8fd
+Replica 4p625
+$[MuleRuntime].uber.1411: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:50:32.994 EST - OnErrorPropagateHandler - 58c4fe8a-9e28-499c-a70f-c88c66706e91
+Replica 4p625
+$[MuleRuntime].uber.1399: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:50:32.990 EST - OnErrorPropagateHandler - 58c4fe8a-9e28-499c-a70f-c88c66706e91
+Replica 4p625
+$[MuleRuntime].uber.1400: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:50:32.989 EST - OnErrorPropagateHandler - 58c4fe8a-9e28-499c-a70f-c88c66706e91
+Replica 4p625
+$[MuleRuntime].uber.1399: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:59.155 EST - OnErrorPropagateHandler - 5e059e94-4fe3-4138-9e1c-2922b48e9f37
+Replica 4p625
+$[MuleRuntime].uber.1396: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:59.152 EST - OnErrorPropagateHandler - 5e059e94-4fe3-4138-9e1c-2922b48e9f37
+Replica 4p625
+$[MuleRuntime].uber.1397: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:59.151 EST - OnErrorPropagateHandler - 5e059e94-4fe3-4138-9e1c-2922b48e9f37
+Replica 4p625
+$[MuleRuntime].uber.1396: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:37.349 EST - OnErrorPropagateHandler - 93bfe9a5-e446-45ae-8d9c-7f1d50ae5643
+Replica 4p625
+$[MuleRuntime].uber.1396: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:37.346 EST - OnErrorPropagateHandler - 93bfe9a5-e446-45ae-8d9c-7f1d50ae5643
+Replica 4p625
+$[MuleRuntime].uber.1397: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:48:37.345 EST - OnErrorPropagateHandler - 93bfe9a5-e446-45ae-8d9c-7f1d50ae5643
+Replica 4p625
+$[MuleRuntime].uber.1396: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:42:04.808 EST - OnErrorPropagateHandler - 3c2e86cf-0e07-447e-8aa0-69b66c1658c7
+Replica 4p625
+$[MuleRuntime].uber.1390: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:42:04.804 EST - OnErrorPropagateHandler - 3c2e86cf-0e07-447e-8aa0-69b66c1658c7
+Replica 4p625
+$[MuleRuntime].uber.1391: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:42:04.803 EST - OnErrorPropagateHandler - 3c2e86cf-0e07-447e-8aa0-69b66c1658c7
+Replica 4p625
+$[MuleRuntime].uber.1390: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:36:15.484 EST - OnErrorPropagateHandler - ed0c6ec1-57a2-4296-be25-d94cd65be72b
+Replica 4p625
+$[MuleRuntime].uber.1384: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:36:15.481 EST - OnErrorPropagateHandler - ed0c6ec1-57a2-4296-be25-d94cd65be72b
+Replica 4p625
+$[MuleRuntime].uber.1385: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:36:15.480 EST - OnErrorPropagateHandler - ed0c6ec1-57a2-4296-be25-d94cd65be72b
+Replica 4p625
+$[MuleRuntime].uber.1384: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:35:43.048 EST - OnErrorPropagateHandler - 1ba448c2-92f1-46c9-ba82-3da210c24e17
+Replica 4p625
+$[MuleRuntime].uber.1381: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:35:43.046 EST - OnErrorPropagateHandler - 1ba448c2-92f1-46c9-ba82-3da210c24e17
+Replica 4p625
+$[MuleRuntime].uber.1382: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:35:43.045 EST - OnErrorPropagateHandler - 1ba448c2-92f1-46c9-ba82-3da210c24e17
+Replica 4p625
+$[MuleRuntime].uber.1381: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:30:15.366 EST - OnErrorPropagateHandler - fb6b9c9c-c768-4f55-af30-ed0920793566
+Replica 4p625
+$[MuleRuntime].uber.1374: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:30:15.363 EST - OnErrorPropagateHandler - fb6b9c9c-c768-4f55-af30-ed0920793566
+Replica 4p625
+$[MuleRuntime].uber.1375: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:30:15.362 EST - OnErrorPropagateHandler - fb6b9c9c-c768-4f55-af30-ed0920793566
+Replica 4p625
+$[MuleRuntime].uber.1374: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:29:56.272 EST - OnErrorPropagateHandler - 537e2324-bd2c-4fda-bcee-387fdefb68d6
+Replica 4p625
+$[MuleRuntime].uber.1374: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:29:56.269 EST - OnErrorPropagateHandler - 537e2324-bd2c-4fda-bcee-387fdefb68d6
+Replica 4p625
+$[MuleRuntime].uber.1375: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:29:56.268 EST - OnErrorPropagateHandler - 537e2324-bd2c-4fda-bcee-387fdefb68d6
+Replica 4p625
+$[MuleRuntime].uber.1374: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:27:44.266 EST - OnErrorPropagateHandler - 97a37871-a86e-40c6-b840-4714848954a9
+Replica 4p625
+$[MuleRuntime].uber.1371: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:27:44.262 EST - OnErrorPropagateHandler - 97a37871-a86e-40c6-b840-4714848954a9
+Replica 4p625
+$[MuleRuntime].uber.1372: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:27:44.259 EST - OnErrorPropagateHandler - 97a37871-a86e-40c6-b840-4714848954a9
+Replica 4p625
+$[MuleRuntime].uber.1371: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 10:06:12.916 EST - OnErrorPropagateHandler - bede56be-725f-4a16-9cbf-f195446ad03a
+Replica 4p625
+$[MuleRuntime].uber.1361: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @4704ea21 - Exception(s) were found for route(s): 
+
+Route 0: Caught exception in Exception Strategy: HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/result' failed: internal server error (500).
+Error
+3 days ago - 2023-12-09 09:56:58.085 EST - OnErrorPropagateHandler - fb01b81a-d0e5-4bc9-9573-325155d4344c
+Replica 4p625
+$[MuleRuntime].uber.1322: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:58.083 EST - OnErrorPropagateHandler - fb01b81a-d0e5-4bc9-9573-325155d4344c
+Replica 4p625
+$[MuleRuntime].uber.1323: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:58.081 EST - OnErrorPropagateHandler - fb01b81a-d0e5-4bc9-9573-325155d4344c
+Replica 4p625
+$[MuleRuntime].uber.1322: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:30.478 EST - OnErrorPropagateHandler - 69375a13-5f81-4815-afe4-8cebff8fb650
+Replica 4p625
+$[MuleRuntime].uber.1322: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:30.475 EST - OnErrorPropagateHandler - 69375a13-5f81-4815-afe4-8cebff8fb650
+Replica 4p625
+$[MuleRuntime].uber.1323: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:56:30.473 EST - OnErrorPropagateHandler - 69375a13-5f81-4815-afe4-8cebff8fb650
+Replica 4p625
+$[MuleRuntime].uber.1322: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @381fb25a - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus)
+Element DSL           : <http:request method="GET" doc:name="requestToStatus" doc:id="4bae7f0f-d563-49c1-a2ee-4df12b47b6fb" config-ref="requestToBulkApi" path="${bulkrequest.statuspath}">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[{
+	"job_id": attributes.queryParams.job_id
+}]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-status-implemantation-flow(bulk-export-status-implemantation-flow/processors/3 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:94 (requestToStatus))
+at get:\status:baycare-bekhealth-eapi-config(get:\status:baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:62 (bulk-export-status-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:04:12.601 EST - OnErrorPropagateHandler - da004442-2b91-4311-b1f3-c5bceee1e20e
+Replica 4p625
+$[MuleRuntime].uber.1290: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:04:12.598 EST - OnErrorPropagateHandler - da004442-2b91-4311-b1f3-c5bceee1e20e
+Replica 4p625
+$[MuleRuntime].uber.1291: [baycare-bekhealth-eapi].get:\export\(group_id):baycare-bekhealth-eapi-config.CPU_INTENSIVE @1d74fc3d - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 09:04:12.596 EST - OnErrorPropagateHandler - da004442-2b91-4311-b1f3-c5bceee1e20e
+Replica 4p625
+$[MuleRuntime].uber.1290: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @23f3f9dc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport)
+Element DSL           : <http:request method="GET" doc:name="requestToExport" doc:id="abbb79f0-f0bc-4220-b849-baa57a920d52" config-ref="requestToBulkApi" path="#[p('bulkrequest.exportpath') ++ vars.group]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[vars.params]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-implemantation-flow(bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport))
+at get:\export\(group_id):baycare-bekhealth-eapi-config(get:\export\(group_id):baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:38 (bulk-export-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:42:15.178 EST - OnErrorPropagateHandler - d43eb039-6c64-4d83-beca-d842f8eb501d
+Replica 4p625
+$[MuleRuntime].uber.1277: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:42:15.175 EST - OnErrorPropagateHandler - d43eb039-6c64-4d83-beca-d842f8eb501d
+Replica 4p625
+$[MuleRuntime].uber.1278: [baycare-bekhealth-eapi].get:\export\(group_id):baycare-bekhealth-eapi-config.CPU_INTENSIVE @1d74fc3d - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:42:15.174 EST - OnErrorPropagateHandler - d43eb039-6c64-4d83-beca-d842f8eb501d
+Replica 4p625
+$[MuleRuntime].uber.1277: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @23f3f9dc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport)
+Element DSL           : <http:request method="GET" doc:name="requestToExport" doc:id="abbb79f0-f0bc-4220-b849-baa57a920d52" config-ref="requestToBulkApi" path="#[p('bulkrequest.exportpath') ++ vars.group]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[vars.params]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-implemantation-flow(bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport))
+at get:\export\(group_id):baycare-bekhealth-eapi-config(get:\export\(group_id):baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:38 (bulk-export-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:41:12.579 EST - OnErrorPropagateHandler - e06b1bb0-16b3-4b7c-93ee-3336d3429c17
+Replica 4p625
+$[MuleRuntime].uber.1274: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:41:12.575 EST - OnErrorPropagateHandler - e06b1bb0-16b3-4b7c-93ee-3336d3429c17
+Replica 4p625
+$[MuleRuntime].uber.1275: [baycare-bekhealth-eapi].get:\export\(group_id):baycare-bekhealth-eapi-config.CPU_INTENSIVE @1d74fc3d - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:41:12.574 EST - OnErrorPropagateHandler - e06b1bb0-16b3-4b7c-93ee-3336d3429c17
+Replica 4p625
+$[MuleRuntime].uber.1274: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @23f3f9dc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport)
+Element DSL           : <http:request method="GET" doc:name="requestToExport" doc:id="abbb79f0-f0bc-4220-b849-baa57a920d52" config-ref="requestToBulkApi" path="#[p('bulkrequest.exportpath') ++ vars.group]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[vars.params]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-implemantation-flow(bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport))
+at get:\export\(group_id):baycare-bekhealth-eapi-config(get:\export\(group_id):baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:38 (bulk-export-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:27:17.273 EST - OnErrorPropagateHandler - 6b88b983-cae7-41a5-af7b-41045977cbdb
+Replica 4p625
+$[MuleRuntime].uber.1268: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:27:17.269 EST - OnErrorPropagateHandler - 6b88b983-cae7-41a5-af7b-41045977cbdb
+Replica 4p625
+$[MuleRuntime].uber.1269: [baycare-bekhealth-eapi].get:\export\(group_id):baycare-bekhealth-eapi-config.CPU_INTENSIVE @1d74fc3d - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:27:17.268 EST - OnErrorPropagateHandler - 6b88b983-cae7-41a5-af7b-41045977cbdb
+Replica 4p625
+$[MuleRuntime].uber.1268: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @23f3f9dc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport)
+Element DSL           : <http:request method="GET" doc:name="requestToExport" doc:id="abbb79f0-f0bc-4220-b849-baa57a920d52" config-ref="requestToBulkApi" path="#[p('bulkrequest.exportpath') ++ vars.group]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[vars.params]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-implemantation-flow(bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport))
+at get:\export\(group_id):baycare-bekhealth-eapi-config(get:\export\(group_id):baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:38 (bulk-export-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:04:41.023 EST - OnErrorPropagateHandler - 92ec76d7-6e15-4340-9d91-e1793171fdf3
+Replica 4p625
+$[MuleRuntime].uber.1260: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:04:41.018 EST - OnErrorPropagateHandler - 92ec76d7-6e15-4340-9d91-e1793171fdf3
+Replica 4p625
+$[MuleRuntime].uber.1261: [baycare-bekhealth-eapi].get:\export\(group_id):baycare-bekhealth-eapi-config.CPU_INTENSIVE @1d74fc3d - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+3 days ago - 2023-12-09 08:04:41.017 EST - OnErrorPropagateHandler - 92ec76d7-6e15-4340-9d91-e1793171fdf3
+Replica 4p625
+$[MuleRuntime].uber.1260: [baycare-bekhealth-eapi].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @23f3f9dc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/export/11ee-825c-2f771b60-8151-a7bda3f20937' failed: internal server error (500).
+Element               : bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport)
+Element DSL           : <http:request method="GET" doc:name="requestToExport" doc:id="abbb79f0-f0bc-4220-b849-baa57a920d52" config-ref="requestToBulkApi" path="#[p('bulkrequest.exportpath') ++ vars.group]">
+<error-mapping targetType="APP:ANY"></error-mapping>
+<http:body><![CDATA[
+#[null]
+]]></http:body>
+<http:query-params><![CDATA[
+#[vars.params]
+]]></http:query-params>
+</http:request>
+Error type            : APP:ANY
+FlowStack             : at bulk-export-implemantation-flow(bulk-export-implemantation-flow/processors/2 @ baycare-bekhealth-eapi:bulk-export-implementation.xml:56 (requestToExport))
+at get:\export\(group_id):baycare-bekhealth-eapi-config(get:\export\(group_id):baycare-bekhealth-eapi-config/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:38 (bulk-export-implemantation-flow))
+at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 13:03:03.534 EST - OnErrorPropagateHandler - 34c509f7-238a-48be-b97f-58b914e5ac0b
+Replica 4p625
+$[MuleRuntime].uber.1031: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 13:00:43.996 EST - OnErrorPropagateHandler - b36b7643-0e07-43bb-924c-40c31de02e49
+Replica 4p625
+$[MuleRuntime].uber.1026: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 13:00:38.756 EST - OnErrorPropagateHandler - 266336d0-62d8-4943-aa01-3e4404c7487c
+Replica 4p625
+$[MuleRuntime].uber.1026: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:57:49.109 EST - OnErrorPropagateHandler - 005cc608-c005-4bbd-8d19-f1f1a97cfad3
+Replica 4p625
+$[MuleRuntime].uber.1021: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:56:52.956 EST - OnErrorPropagateHandler - 1be2a0bc-48f9-4d3a-a177-5e8a1c744318
+Replica 4p625
+$[MuleRuntime].uber.1020: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:53:13.214 EST - OnErrorPropagateHandler - 4a7fbc3c-4ef2-4934-a69f-df502818b8b4
+Replica 4p625
+$[MuleRuntime].uber.1014: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:50:34.914 EST - OnErrorPropagateHandler - fb359b56-d032-4888-8e24-f6702d632ca9
+Replica 4p625
+$[MuleRuntime].uber.1006: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:46:03.904 EST - OnErrorPropagateHandler - ef21c5ae-5aed-44a8-bf10-d72e308f4ecd
+Replica 4p625
+$[MuleRuntime].uber.999: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:44:57.092 EST - OnErrorPropagateHandler - 5cb095e2-16c5-46cc-9d19-8af5468188a8
+Replica 4p625
+$[MuleRuntime].uber.996: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:35:28.937 EST - OnErrorPropagateHandler - 91a82d52-1dcb-4c28-9310-07c2264903a8
+Replica 4p625
+$[MuleRuntime].uber.983: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:35:23.676 EST - OnErrorPropagateHandler - c1654f78-d707-42c9-972e-75a7372a7d79
+Replica 4p625
+$[MuleRuntime].uber.983: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : HTTP Method delete not allowed for : /status
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:METHOD_NOT_ALLOWED
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:31:55.633 EST - OnErrorPropagateHandler - a7d19ae1-ee25-44eb-99ce-7c2990583464
+Replica 4p625
+$[MuleRuntime].uber.980: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:31:50.377 EST - OnErrorPropagateHandler - 70922bb4-c6e7-4886-a660-ac5123947386
+Replica 4p625
+$[MuleRuntime].uber.979: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:18:08.474 EST - OnErrorPropagateHandler - daffe5eb-d262-47fa-b75a-5870a7c18158
+Replica 4p625
+$[MuleRuntime].uber.966: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:18:03.219 EST - OnErrorPropagateHandler - 2043f5f2-d882-4721-8609-45aa23e811ff
+Replica 4p625
+$[MuleRuntime].uber.965: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:17:57.964 EST - OnErrorPropagateHandler - c6d86df0-672b-407f-9f0a-f72eb59e88b9
+Replica 4p625
+$[MuleRuntime].uber.966: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:10:55.390 EST - OnErrorPropagateHandler - 17dc1171-04de-49b3-8da2-a47bea1346d2
+Replica 4p625
+$[MuleRuntime].uber.961: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:09:57.953 EST - OnErrorPropagateHandler - b5ca62c8-8469-468e-9e15-d831048b69d7
+Replica 4p625
+$[MuleRuntime].uber.959: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:09:00.012 EST - OnErrorPropagateHandler - 1ac9f906-e43f-47f8-bc33-896070f63299
+Replica 4p625
+$[MuleRuntime].uber.957: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:08:54.753 EST - OnErrorPropagateHandler - bcf2f687-9484-4398-b2cb-3e3d5a192331
+Replica 4p625
+$[MuleRuntime].uber.956: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:08:49.508 EST - OnErrorPropagateHandler - b4ef24ab-bab1-45c6-a4a9-481a145d39b3
+Replica 4p625
+$[MuleRuntime].uber.957: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:07:36.886 EST - OnErrorPropagateHandler - c08940f8-a855-486e-a0c5-b7b34a73eb89
+Replica 4p625
+$[MuleRuntime].uber.955: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:07:31.619 EST - OnErrorPropagateHandler - 21fd4700-4e56-44d2-86bf-1329f89f7f9a
+Replica 4p625
+$[MuleRuntime].uber.954: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:07:26.350 EST - OnErrorPropagateHandler - f195d611-1bf0-4aed-8603-e5ca237cf8af
+Replica 4p625
+$[MuleRuntime].uber.955: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : Not Acceptable
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_ACCEPTABLE
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:03:14.753 EST - OnErrorPropagateHandler - 1c5b8999-a1e0-4d8d-9cd9-d6ae9c579d67
+Replica 4p625
+$[MuleRuntime].uber.952: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:03:09.506 EST - OnErrorPropagateHandler - 6a62a9ce-aaa6-4074-9fd9-3a2083b09c06
+Replica 4p625
+$[MuleRuntime].uber.951: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 12:03:04.253 EST - OnErrorPropagateHandler - 1acbc946-5514-461d-9d82-dd9e1c4e3ce5
+Replica 4p625
+$[MuleRuntime].uber.952: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 11:59:49.331 EST - OnErrorPropagateHandler - 88305ffa-0b12-461b-a1df-105dcc5298d8
+Replica 4p625
+$[MuleRuntime].uber.950: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 11:59:44.072 EST - OnErrorPropagateHandler - 834d9c4d-86b5-4cce-992b-71037c3a181b
+Replica 4p625
+$[MuleRuntime].uber.949: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 11:59:38.815 EST - OnErrorPropagateHandler - 229f876b-bffb-42c8-9737-31b6cc7688ef
+Replica 4p625
+$[MuleRuntime].uber.950: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_LITE @3fe71d8b - 
+********************************************************************************
+Message               : /Group/11ee-825c-2f771b60-8151-a7bda3f20937/%24export
+Element               : baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16
+Element DSL           : <apikit:router config-ref="baycare-bekhealth-eapi-config"></apikit:router>
+Error type            : APIKIT:NOT_FOUND
+FlowStack             : at baycare-bekhealth-eapi-main(baycare-bekhealth-eapi-main/processors/0 @ baycare-bekhealth-eapi:baycare-bekhealth-eapi.xml:16)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 11:44:25.714 EST - OnErrorPropagateHandler - 01c2badf-6842-4c83-97ec-e2d72e93012b
+Replica 4p625
+$[MuleRuntime].uber.940: [baycare-bekhealth-eapi].baycare-bekhealth-eapi-main.CPU_INTENSIVE @5bb874da - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error
+4 days ago - 2023-12-08 11:44:25.702 EST - OnErrorPropagateHandler - 01c2badf-6842-4c83-97ec-e2d72e93012b
+Replica 4p625
+$[MuleRuntime].uber.941: [baycare-bekhealth-eapi].get:\status:baycare-bekhealth-eapi-config.CPU_INTENSIVE @71ab14bc - 
+********************************************************************************
+Message               : HTTP GET on resource 'https://baycare-cerner-bulk-export-sapi-xet57i.rajrd4-2.usa-e1.cloudhub.io:443/api/status' failed: internal server error (500).
+Element               : (None)
+Element DSL           : (None)
+Error type            : APP:ANY
+FlowStack             : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+Error

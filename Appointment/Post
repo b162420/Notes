@@ -1,0 +1,59 @@
+-----------Endpoint to know which URL to use for getting a token as it is dependent on the Tenant ID you are using--------------------------------------------------
+you should know that each tenant has a /metadata endpoint that shows the tenant's FHIR Capability statement that will provide you the token endpoint. 
+You should know that each tenant has a /metadata endpoint that shows the tenant's FHIR Capability statement that will provide you the token endpoint. 
+GET https://fhir-ehr.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/metadata
+ 
+--------------------------------------------This is the Token endpoint for Public API (the one listed in documentation...Their website-----------------------------------
+Shows this is the endpoint to use for a token
+{
+                                "valueUri": "https://authorization.cerner.com/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/protocols/oauth2/profiles/smart-v1/token",
+                                "url": "token"
+                            },  
+							
+--------------------------------------------This is the Token endpoint for C30 (The one used by Baycare -----------------------------------
+Token for C30 which is tenant id: HWOoIlRX2YdFf924bAe6RGIyZknj6kN7. A tenant id is assigned per Oracle Health Millennium domain.
+
+Token: POST https://authorization.sandboxcerner.com/tenants/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/protocols/oauth2/profiles/smart-v1/token
+ 
+Url Used to get appointments for patient 12724066:
+GET https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Appointment?patient=12724066&date=ge2020-01-01T22:22:16.270Z
+ 
+POST /Appointment is usually used after you have done a GET /Slot
+POST /Appointment should not have a ID in the URL https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Appointment and not https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Appointment/6427746
+
+
+-------------Working Example for Post in C30--------------------------------------------------------
+1)- First check to Confirm if the patient is in C30:
+GET https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Patient/12724066
+
+ 
+2)- You need to call slots API to get slots available to be booked in C30: Grab the id and update the POST /Appointment slot->reference
+GET https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Slot/?schedule.actor=Practitioner/23589263&-location=1086134633&start=ge2023-12-12T23%3A59%3A59.000Z&start=lt2023-12-15T00%3A00%3A00.000Z&service-type=https://fhir.cerner.com/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/codeSet/14249|5439671227
+ 
+3)- POST https://fhir-ehr.sandboxcerner.com/r4/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/Appointment
+
+Here is the Body:
+POST/AppontmentJson
+
+{
+  "resourceType": "Appointment",
+  "status": "booked",
+  "slot": [
+    {
+      "reference": "Slot/5439671227-1086134633-478886016-160"
+    }
+  ],
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/12724066"
+      },
+      "status": "accepted"
+    }
+  ],
+  "reasonCode": [
+    {
+      "text": "Booking Rad Appt"
+    }
+  ]
+}

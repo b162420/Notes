@@ -57,3 +57,16 @@ POST/AppontmentJson
     }
   ]
 }
+
+---------------------C30 + Public API Creds -----------------------------------------------------------------------------
+get token:  Public API
+
+Url: https://authorization.cerner.com/tenants/ec2458f2-1e24-41c8-b71b-0e701af7583d/protocols/oauth2/profiles/smart-v1/token
+User nanme: 49d93a1c-1181-4838-a6e5-e1cb4b24232d
+Password: Tiwe1cdCQjDeZ0matgxT23WyTnGSwbCB
+
+================C30 ---------------------------------------------------------------------------------
+This is the URL I am using to request my token:
+URL: https://authorization.sandboxcerner.com/tenants/HWOoIlRX2YdFf924bAe6RGIyZknj6kN7/protocols/oauth2/profiles/smart-v1/token
+username: 20dffb72-8d98-4883-898d-ce51dfb7e6a3
+Password: _tBcVTa7LVWpXTDwp64Xed4J6uR_hbdz

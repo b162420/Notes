@@ -1,0 +1,126 @@
+02:03:31.427     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b Error sending HTTP request to https://api.myambs.com:8080/cmcrestapi/auth/login
+02:03:31.511     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : HTTP POST on resource 'https://api.myambs.com:8080/cmcrestapi/auth/login' failed: Connect timeout.
+Element               : authenticationFlow/processors/1/route/0/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:157 (Request > vars.token)
+Element DSL           : <http:request method="POST" doc:name="Request > vars.token" doc:id="754ecd9c-a840-4e6d-aeda-4292f042201a" config-ref="HTTP_Request_configuration" path="${secure::ambs.auth-path}" target="token" targetValue="#[output application/json --- payload]" responseTimeout="1000000">
+<http:body><![CDATA[
+#[output application/json ---
+{
+    "username": p('secure::ambs.username'),
+    "password": p('secure::ambs.password')
+}]
+]]></http:body>
+</http:request>
+Error type            : HTTP:CONNECTIVITY
+FlowStack             : at authenticationFlow(authenticationFlow/processors/1/route/0/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:157 (Request > vars.token))
+at get-unfiled-messages(get-unfiled-messages/processors/4 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:90 (Flow Reference))
+at get:\messages\unfiled:bc-ambs-sys-api-config(get:\messages\unfiled:bc-ambs-sys-api-config/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-api.xml:137 (Flow Reference))
+at bc-ambs-sys-api-main(bc-ambs-sys-api-main/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-api.xml:15)
+Payload Type          : org.mule.runtime.core.internal.streaming.bytes.ManagedCursorStreamProvider
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.ConnectException: Connect timeout
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectCompletionHandler.cancelled(SingleEndpointPool.java:1290)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.notifyCompletionHandlers(SafeFutureImpl.java:185)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.done(SafeFutureImpl.java:277)
+	at org.glassfish.grizzly.impl.SafeFutureImpl$Sync.innerCancel(SafeFutureImpl.java:389)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.cancel(SafeFutureImpl.java:247)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1365)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1357)
+	at org.glassfish.grizzly.utils.DelayedExecutor$DelayedRunnable.run(DelayedExecutor.java:171)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+02:03:31.539     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : HTTP POST on resource 'https://api.myambs.com:8080/cmcrestapi/auth/login' failed: Connect timeout.
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:CONNECTIVITY
+FlowStack             : (None)
+Payload Type          : org.mule.runtime.core.internal.streaming.bytes.ManagedCursorStreamProvider
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.ConnectException: Connect timeout
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectCompletionHandler.cancelled(SingleEndpointPool.java:1290)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.notifyCompletionHandlers(SafeFutureImpl.java:185)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.done(SafeFutureImpl.java:277)
+	at org.glassfish.grizzly.impl.SafeFutureImpl$Sync.innerCancel(SafeFutureImpl.java:389)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.cancel(SafeFutureImpl.java:247)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1365)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1357)
+	at org.glassfish.grizzly.utils.DelayedExecutor$DelayedRunnable.run(DelayedExecutor.java:171)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+03:03:32.131     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:de6ecf40-98c4-11ee-871f-0ea42bba6a7b Error sending HTTP request to https://api.myambs.com:8080/cmcrestapi/auth/login
+03:03:32.134     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:de6ecf40-98c4-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : HTTP POST on resource 'https://api.myambs.com:8080/cmcrestapi/auth/login' failed: Connect timeout.
+Element               : authenticationFlow/processors/1/route/0/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:157 (Request > vars.token)
+Element DSL           : <http:request method="POST" doc:name="Request > vars.token" doc:id="754ecd9c-a840-4e6d-aeda-4292f042201a" config-ref="HTTP_Request_configuration" path="${secure::ambs.auth-path}" target="token" targetValue="#[output application/json --- payload]" responseTimeout="1000000">
+<http:body><![CDATA[
+#[output application/json ---
+{
+    "username": p('secure::ambs.username'),
+    "password": p('secure::ambs.password')
+}]
+]]></http:body>
+</http:request>
+Error type            : HTTP:CONNECTIVITY
+FlowStack             : at authenticationFlow(authenticationFlow/processors/1/route/0/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:157 (Request > vars.token))
+at get-unfiled-messages(get-unfiled-messages/processors/4 @ bc-ambs-sys-api-prod:bc-ambs-sys-implimentation.xml:90 (Flow Reference))
+at get:\messages\unfiled:bc-ambs-sys-api-config(get:\messages\unfiled:bc-ambs-sys-api-config/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-api.xml:137 (Flow Reference))
+at bc-ambs-sys-api-main(bc-ambs-sys-api-main/processors/0 @ bc-ambs-sys-api-prod:bc-ambs-sys-api.xml:15)
+Payload Type          : org.mule.runtime.core.internal.streaming.bytes.ManagedCursorStreamProvider
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.ConnectException: Connect timeout
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectCompletionHandler.cancelled(SingleEndpointPool.java:1290)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.notifyCompletionHandlers(SafeFutureImpl.java:185)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.done(SafeFutureImpl.java:277)
+	at org.glassfish.grizzly.impl.SafeFutureImpl$Sync.innerCancel(SafeFutureImpl.java:389)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.cancel(SafeFutureImpl.java:247)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1365)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1357)
+	at org.glassfish.grizzly.utils.DelayedExecutor$DelayedRunnable.run(DelayedExecutor.java:171)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+03:03:32.137     12/12/2023     Worker-0     connection-pool-delays-thread-pool(1)     ERROR
+event:de6ecf40-98c4-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : HTTP POST on resource 'https://api.myambs.com:8080/cmcrestapi/auth/login' failed: Connect timeout.
+Element               : (None)
+Element DSL           : (None)
+Error type            : HTTP:CONNECTIVITY
+FlowStack             : (None)
+Payload Type          : org.mule.runtime.core.internal.streaming.bytes.ManagedCursorStreamProvider
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.ConnectException: Connect timeout
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectCompletionHandler.cancelled(SingleEndpointPool.java:1290)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.notifyCompletionHandlers(SafeFutureImpl.java:185)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.done(SafeFutureImpl.java:277)
+	at org.glassfish.grizzly.impl.SafeFutureImpl$Sync.innerCancel(SafeFutureImpl.java:389)
+	at org.glassfish.grizzly.impl.SafeFutureImpl.cancel(SafeFutureImpl.java:247)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1365)
+	at org.glassfish.grizzly.connectionpool.SingleEndpointPool$ConnectTimeoutWorker.doWork(SingleEndpointPool.java:1357)
+	at org.glassfish.grizzly.utils.DelayedExecutor$DelayedRunnable.run(DelayedExecutor.java:171)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************

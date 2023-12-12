@@ -1,0 +1,562 @@
+02:03:31.634     12/12/2023     Worker-0     [MuleRuntime].uber.03: [bc-ambs-prc-api-prod].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @43be5ec4     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : HTTP GET on resource 'https://mule-worker-internal-bc-ambs-sys-api-prod.us-e1.cloudhub.io:8092/api/messages/unfiled' failed: internal server error (500).
+Element               : sync/processors/1 @ bc-ambs-prc-api-prod:bc-ambs-prc-implementation.xml:26 (sys-ambs get messages)
+Element DSL           : <http:request method="GET" doc:name="sys-ambs get messages" doc:id="b1a72f63-8bb1-4bc9-8f1f-baaa1f38dccc" config-ref="HTTP_Request_configuration_SYS_AMBS_temp" path="/api/messages/unfiled" responseTimeout="1000000">
+<http:query-params><![CDATA[
+#[{
+	startDate: (now() >> "EST" - |PT1H|) as Date { format: 'MM/dd/yyyy' },
+	//startDate: "03/01/2022" as Date { format: 'MM/dd/yyyy' },
+	endDate: attributes.queryParams.endDate default (now() >> "EST") as String,
+	//endDate: (now()) as Date { format: 'MM/dd/yyyy' },
+	clienttxtid: p('sys.ambs.clienttxtid')
+}]
+]]></http:query-params>
+</http:request>
+Error type            : HTTP:INTERNAL_SERVER_ERROR
+FlowStack             : at sync(sync/processors/1 @ bc-ambs-prc-api-prod:bc-ambs-prc-implementation.xml:26 (sys-ambs get messages))
+at bc-ambs-prc-implementationFlow(bc-ambs-prc-implementationFlow/processors/0 @ bc-ambs-prc-api-prod:bc-ambs-prc-implementation.xml:17 (sync))
+Payload               : null
+Payload Type          : null
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+HTTP GET on resource 'https://mule-worker-internal-bc-ambs-sys-api-prod.us-e1.cloudhub.io:8092/api/messages/unfiled' failed: internal server error (500).
+	at org.mule.extension.http.api.request.validator.RangeStatusCodeValidator.lambda$throwValidationException$3(RangeStatusCodeValidator.java:107)
+	at java.util.Optional.map(Optional.java:215)
+	at org.mule.extension.http.api.request.validator.RangeStatusCodeValidator.throwValidationException(RangeStatusCodeValidator.java:106)
+	at org.mule.extension.http.api.request.validator.SuccessStatusCodeValidator.lambda$validate$1(SuccessStatusCodeValidator.java:39)
+	at org.mule.extension.http.api.request.validator.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:46)
+	at org.mule.extension.http.api.request.validator.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:39)
+	at org.mule.extension.http.internal.request.HttpRequester.lambda$null$4(HttpRequester.java:147)
+	at org.mule.extension.http.internal.request.HttpRequester.resendRequest(HttpRequester.java:220)
+	at org.mule.extension.http.internal.request.HttpRequester.lambda$doRequestWithRetry$5(HttpRequester.java:140)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at com.mulesoft.service.http.impl.service.client.EEGrizzlyHttpClient.lambda$sendAsync$1(EEGrizzlyHttpClient.java:152)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at org.mule.service.http.impl.service.client.GrizzlyHttpClient.lambda$sendAsync$0(GrizzlyHttpClient.java:465)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at org.mule.service.http.impl.service.client.async.ResponseAsyncHandler.onCompleted(ResponseAsyncHandler.java:47)
+	at org.mule.service.http.impl.service.client.async.ResponseAsyncHandler.onCompleted(ResponseAsyncHandler.java:29)
+	at com.ning.http.client.AsyncCompletionHandler.onCompleted(AsyncCompletionHandler.java:55)
+	at org.mule.service.http.impl.service.client.async.PreservingClassLoaderAsyncHandler.onCompleted(PreservingClassLoaderAsyncHandler.java:83)
+	at com.ning.http.client.providers.grizzly.AhcEventFilter.onHttpPacketParsed(AhcEventFilter.java:433)
+	at org.glassfish.grizzly.http.HttpCodecFilter.decodeWithTransferEncoding(HttpCodecFilter.java:1429)
+	at org.glassfish.grizzly.http.HttpCodecFilter.handleRead(HttpCodecFilter.java:677)
+	at org.glassfish.grizzly.http.HttpClientFilter.handleRead(HttpClientFilter.java:182)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:540)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.SameThreadIOStrategy.executeIoEvent(SameThreadIOStrategy.java:103)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.executeIoEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.nio.SelectorRunner.iterateKeyEvents(SelectorRunner.java:415)
+	at org.glassfish.grizzly.nio.SelectorRunner.iterateKeys(SelectorRunner.java:384)
+	at org.glassfish.grizzly.nio.SelectorRunner.doSelect(SelectorRunner.java:348)
+	at org.glassfish.grizzly.nio.SelectorRunner.run(SelectorRunner.java:279)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.mule.service.scheduler.internal.AbstractRunnableFutureDecorator.doRun(AbstractRunnableFutureDecorator.java:151)
+	at org.mule.service.scheduler.internal.RunnableFutureDecorator.run(RunnableFutureDecorator.java:54)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+02:03:32.150     12/12/2023     Worker-0     [MuleRuntime].uber.03: [bc-ambs-prc-api-prod].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @43be5ec4     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b Exception during exception strategy execution
+02:03:32.152     12/12/2023     Worker-0     [MuleRuntime].uber.03: [bc-ambs-prc-api-prod].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @43be5ec4     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : "org.mule.weave.v2.exception.UnexpectedFunctionCallTypesException: You called the function '++' with these arguments: 
+  1: Array ([{code: 500,reason: "UNKNOWN",message: "Internal Server Error"}])
+  2: Binary ("" as Binary {base: "64"})
+
+But it expects one of these combinations:
+  (Array, Array)
+  (Date, Time)
+  (Date, LocalTime)
+  (Date, TimeZone)
+  (LocalDateTime, TimeZone)
+  (LocalTime, Date)
+  (LocalTime, TimeZone)
+  (Object, Object)
+  (String, String)
+  (Time, Date)
+  (TimeZone, LocalDateTime)
+  (TimeZone, Date)
+  (TimeZone, LocalTime)
+
+24| 							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+                                                                                  ^^
+Trace:
+  at anonymous::main (line: 24, column: 79)
+" evaluating expression: "%dw 2.0
+output application/json
+fun mapError(errorCode, errorMessage, reason) = [{
+	code: errorCode,
+	reason: reason,
+	message: errorMessage
+}] 
+var customErrors = (if(isEmpty(vars.customErrors)) {} else vars.customErrors) default {}
+fun loadErrorConfig(errType) = (customErrors[errType]) match  {
+				    case obj if(obj !=null) -> customErrors[errType]
+				    else -> vars.defaultErrors[errType] default {}
+				    }
+var result = loadErrorConfig(vars.errorType) default {}
+---
+{
+	"success": false,
+	"apiName": vars.apiName,
+	"version": vars.apiVersion,
+	"correlationId": vars.correlationId,
+	"timestamp": now(),
+	"errorDetails": (if(isEmpty(result))
+			                     mapError(500,'Internal Server Error', 'UNKNOWN')
+							else
+							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+}".
+Element               : globalsError_Handler/0/processors/2 @ bc-ambs-prc-api-prod:globals.xml:51 (Process Error)
+Element DSL           : <error-handler-plugin:on-error doc:name="Process Error" doc:id="452fc777-3334-4069-8ba1-f90f91dbcd59" config-ref="Error_Handler_Plugin_Config"></error-handler-plugin:on-error>
+Error type            : MULE:EXPRESSION
+FlowStack             : at error-handler-plugin:on-error(on-error/processors/6 @ bc-ambs-prc-api-prod:module-error-handler-plugin.xml:128 (Error Response ))
+at sync(globalsError_Handler/0/processors/2 @ bc-ambs-prc-api-prod:globals.xml:51 (Process Error))
+at bc-ambs-prc-implementationFlow(bc-ambs-prc-implementationFlow/processors/0 @ bc-ambs-prc-api-prod:bc-ambs-prc-implementation.xml:17 (sync))
+Payload               : null
+Payload Type          : null
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.runtime.api.el.ExpressionExecutionException: org.mule.weave.v2.exception.UnexpectedFunctionCallTypesException: You called the function '++' with these arguments: 
+  1: Array ([{code: 500,reason: "UNKNOWN",message: "Internal Server Error"}])
+  2: Binary ("" as Binary {base: "64"})
+
+But it expects one of these combinations:
+  (Array, Array)
+  (Date, Time)
+  (Date, LocalTime)
+  (Date, TimeZone)
+  (LocalDateTime, TimeZone)
+  (LocalTime, Date)
+  (LocalTime, TimeZone)
+  (Object, Object)
+  (String, String)
+  (Time, Date)
+  (TimeZone, LocalDateTime)
+  (TimeZone, Date)
+  (TimeZone, LocalTime)
+
+24| 							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+                                                                                  ^^
+Trace:
+  at anonymous::main (line: 24, column: 79)
+
+	at org.mule.weave.v2.el.utils.ExceptionHandler$.handleLocatableException(ExceptionHandler.scala:29)
+	at org.mule.weave.v2.el.WeaveExpressionLanguageSession.doEvaluate(WeaveExpressionLanguageSession.scala:274)
+	at org.mule.weave.v2.el.WeaveExpressionLanguageSession.evaluate(WeaveExpressionLanguageSession.scala:119)
+	at org.mule.runtime.core.internal.el.dataweave.DataWeaveExpressionLanguageAdaptor$1.evaluate(DataWeaveExpressionLanguageAdaptor.java:311)
+	at org.mule.runtime.core.internal.el.DefaultExpressionManagerSession.evaluate(DefaultExpressionManagerSession.java:105)
+	at com.mulesoft.mule.runtime.core.internal.processor.SetVariableTransformationTarget.process(SetVariableTransformationTarget.java:43)
+	at com.mulesoft.mule.runtime.core.internal.processor.TransformMessageProcessor.process(TransformMessageProcessor.java:102)
+	at org.mule.runtime.core.api.util.func.CheckedFunction.apply(CheckedFunction.java:25)
+	at org.mule.runtime.core.api.rx.Exceptions.lambda$checkedFunction$2(Exceptions.java:85)
+	at org.mule.runtime.core.internal.util.rx.Operators.lambda$nullSafeMap$0(Operators.java:47)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:165)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:213)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:242)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:213)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:242)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:793)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.next(FluxCreate.java:718)
+	at reactor.core.publisher.FluxCreate$SerializedSink.next(FluxCreate.java:153)
+	at org.mule.runtime.core.privileged.exception.TemplateOnErrorHandler$1.accept(TemplateOnErrorHandler.java:218)
+	at org.mule.runtime.core.privileged.exception.TemplateOnErrorHandler$1.accept(TemplateOnErrorHandler.java:208)
+	at org.mule.runtime.core.internal.exception.ErrorHandler$1.accept(ErrorHandler.java:132)
+	at org.mule.runtime.core.internal.exception.ErrorHandler$1.accept(ErrorHandler.java:118)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.lambda$routeError$15(AbstractMessageProcessorChain.java:272)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.mule.service.scheduler.internal.AbstractRunnableFutureDecorator.doRun(AbstractRunnableFutureDecorator.java:151)
+	at org.mule.service.scheduler.internal.RunnableFutureDecorator.run(RunnableFutureDecorator.java:54)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+02:03:32.279     12/12/2023     Worker-0     [MuleRuntime].uber.03: [bc-ambs-prc-api-prod].uber@org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.initialise:648 @43be5ec4     ERROR
+event:7c5409e0-98bc-11ee-871f-0ea42bba6a7b 
+********************************************************************************
+Message               : "org.mule.weave.v2.exception.UnexpectedFunctionCallTypesException: You called the function '++' with these arguments: 
+  1: Array ([{code: 500,reason: "UNKNOWN",message: "Internal Server Error"}])
+  2: Binary ("" as Binary {base: "64"})
+
+But it expects one of these combinations:
+  (Array, Array)
+  (Date, Time)
+  (Date, LocalTime)
+  (Date, TimeZone)
+  (LocalDateTime, TimeZone)
+  (LocalTime, Date)
+  (LocalTime, TimeZone)
+  (Object, Object)
+  (String, String)
+  (Time, Date)
+  (TimeZone, LocalDateTime)
+  (TimeZone, Date)
+  (TimeZone, LocalTime)
+
+24| 							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+                                                                                  ^^
+Trace:
+  at anonymous::main (line: 24, column: 79)
+" evaluating expression: "%dw 2.0
+output application/json
+fun mapError(errorCode, errorMessage, reason) = [{
+	code: errorCode,
+	reason: reason,
+	message: errorMessage
+}] 
+var customErrors = (if(isEmpty(vars.customErrors)) {} else vars.customErrors) default {}
+fun loadErrorConfig(errType) = (customErrors[errType]) match  {
+				    case obj if(obj !=null) -> customErrors[errType]
+				    else -> vars.defaultErrors[errType] default {}
+				    }
+var result = loadErrorConfig(vars.errorType) default {}
+---
+{
+	"success": false,
+	"apiName": vars.apiName,
+	"version": vars.apiVersion,
+	"correlationId": vars.correlationId,
+	"timestamp": now(),
+	"errorDetails": (if(isEmpty(result))
+			                     mapError(500,'Internal Server Error', 'UNKNOWN')
+							else
+							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+}".
+Element               : globalsError_Handler/0/processors/2 @ bc-ambs-prc-api-prod:globals.xml:51 (Process Error)
+Element DSL           : <error-handler-plugin:on-error doc:name="Process Error" doc:id="452fc777-3334-4069-8ba1-f90f91dbcd59" config-ref="Error_Handler_Plugin_Config"></error-handler-plugin:on-error>
+Error type            : MULE:EXPRESSION
+FlowStack             : at error-handler-plugin:on-error(on-error/processors/6 @ bc-ambs-prc-api-prod:module-error-handler-plugin.xml:128 (Error Response ))
+at sync(globalsError_Handler/0/processors/2 @ bc-ambs-prc-api-prod:globals.xml:51 (Process Error))
+at bc-ambs-prc-implementationFlow(bc-ambs-prc-implementationFlow/processors/0 @ bc-ambs-prc-api-prod:bc-ambs-prc-implementation.xml:17 (sync))
+Payload               : null
+Payload Type          : null
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.runtime.api.el.ExpressionExecutionException: org.mule.weave.v2.exception.UnexpectedFunctionCallTypesException: You called the function '++' with these arguments: 
+  1: Array ([{code: 500,reason: "UNKNOWN",message: "Internal Server Error"}])
+  2: Binary ("" as Binary {base: "64"})
+
+But it expects one of these combinations:
+  (Array, Array)
+  (Date, Time)
+  (Date, LocalTime)
+  (Date, TimeZone)
+  (LocalDateTime, TimeZone)
+  (LocalTime, Date)
+  (LocalTime, TimeZone)
+  (Object, Object)
+  (String, String)
+  (Time, Date)
+  (TimeZone, LocalDateTime)
+  (TimeZone, Date)
+  (TimeZone, LocalTime)
+
+24| 							    mapError(result.errorCode, result.defaultError, vars.'errorType')) ++ vars.previousErrors 
+                                                                                  ^^
+Trace:
+  at anonymous::main (line: 24, column: 79)
+
+	at org.mule.weave.v2.el.utils.ExceptionHandler$.handleLocatableException(ExceptionHandler.scala:29)
+	at org.mule.weave.v2.el.WeaveExpressionLanguageSession.doEvaluate(WeaveExpressionLanguageSession.scala:274)
+	at org.mule.weave.v2.el.WeaveExpressionLanguageSession.evaluate(WeaveExpressionLanguageSession.scala:119)
+	at org.mule.runtime.core.internal.el.dataweave.DataWeaveExpressionLanguageAdaptor$1.evaluate(DataWeaveExpressionLanguageAdaptor.java:311)
+	at org.mule.runtime.core.internal.el.DefaultExpressionManagerSession.evaluate(DefaultExpressionManagerSession.java:105)
+	at com.mulesoft.mule.runtime.core.internal.processor.SetVariableTransformationTarget.process(SetVariableTransformationTarget.java:43)
+	at com.mulesoft.mule.runtime.core.internal.processor.TransformMessageProcessor.process(TransformMessageProcessor.java:102)
+	at org.mule.runtime.core.api.util.func.CheckedFunction.apply(CheckedFunction.java:25)
+	at org.mule.runtime.core.api.rx.Exceptions.lambda$checkedFunction$2(Exceptions.java:85)
+	at org.mule.runtime.core.internal.util.rx.Operators.lambda$nullSafeMap$0(Operators.java:47)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:165)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:287)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:213)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:242)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:213)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:242)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onNext(FluxPeekFuseable.java:496)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:180)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:527)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:522)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:127)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:351)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:204)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxContextStart$ContextStartSubscriber.onNext(FluxContextStart.java:103)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:793)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.next(FluxCreate.java:718)
+	at reactor.core.publisher.FluxCreate$SerializedSink.next(FluxCreate.java:153)
+	at org.mule.runtime.core.privileged.exception.TemplateOnErrorHandler$1.accept(TemplateOnErrorHandler.java:218)
+	at org.mule.runtime.core.privileged.exception.TemplateOnErrorHandler$1.accept(TemplateOnErrorHandler.java:208)
+	at org.mule.runtime.core.internal.exception.ErrorHandler$1.accept(ErrorHandler.java:132)
+	at org.mule.runtime.core.internal.exception.ErrorHandler$1.accept(ErrorHandler.java:118)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain.lambda$routeError$15(AbstractMessageProcessorChain.java:272)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.mule.service.scheduler.internal.AbstractRunnableFutureDecorator.doRun(AbstractRunnableFutureDecorator.java:151)
+	at org.mule.service.scheduler.internal.RunnableFutureDecorator.run(RunnableFutureDecorator.java:54)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
